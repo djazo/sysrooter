@@ -2,7 +2,7 @@
 Create sysroots for cross compiling targeting debian-like system (raspbian) or alpine.
 
 
-## usage:
+## Usage:
 
 Start container with mounted volumes on /chroots and /sysroots
 Have environment variables set:
