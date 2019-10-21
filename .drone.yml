@@ -11,6 +11,7 @@ steps:
   - name: build
     image: plugins/docker
     settings:
+      dockerfile: Dockerfile
       repo: embeddedreality/sysrooter
       username:
         from_secret: repo_username
