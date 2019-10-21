@@ -15,7 +15,7 @@ steps:
       username:
         from_secret: repo_username
       password:
-        from:secret: repo_password
+        from_secret: repo_password
 
 trigger:
   branch:
