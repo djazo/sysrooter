@@ -44,7 +44,7 @@ if [ "${DISTRO}" == "alpine" ]; then
 	armhf)
 	    _triple='arm-alpine-linux-musl'
 	    ;;
-	aarch)
+	aarch64)
 	    _triple='aarch64-alpine-linux-musl'
 	    ;;
 	*)
@@ -87,7 +87,7 @@ fi
 
 # time to add stuff that user requests.
 
-if [ ! -z "$@" ]; then
+if [ ! -z "$1" ]; then
     echo "Trying to add packages.."
     case "${DISTRO}" in
 	debian)
