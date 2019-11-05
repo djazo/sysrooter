@@ -113,6 +113,9 @@ case "${DISTRO}" in
 	cp -r /chroots/${SYSROOT}/usr/lib/gcc /sysroots/${SYSROOT}/usr/lib/
 	cp /chroots/${SYSROOT}/usr/lib/*.so.* /sysroots/${SYSROOT}/usr/lib/
 	cp -r /chroots/${SYSROOT}/usr/include /sysroots/${SYSROOT}/usr/
+	if [ -d /chroots/${SYSROOT}/usr/src ]; then
+	    cp -r /chroots/${SYSROOT}/usr/src /sysroots/${SYSROOT}/usr/
+	fi
 	;;
     debian)
 	mkdir -p /sysroots/${SYSROOT}/lib /sysroots/${SYSROOT}/usr/lib
@@ -123,6 +126,10 @@ case "${DISTRO}" in
 	cp /chroots/${SYSROOT}/usr/lib/*.a /sysroots/${SYSROOT}/usr/lib/
 	cp -r /chroots/${SYSROOT}/usr/lib/gcc /sysroots/${SYSROOT}/usr/lib/
 	cp -r /chroots/${SYSROOT}/usr/include /sysroots/${SYSROOT}/usr/
+	if [ -d /chroots/${SYSROOT}/usr/src ]; then
+	    cp -r /chroots/${SYSROOT}/usr/src /sysroots/${SYSROOT}/usr/
+	fi
+
 	;;
 esac
 
